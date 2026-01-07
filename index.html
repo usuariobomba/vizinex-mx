@@ -1836,18 +1836,23 @@
 	<script>
 		// Logic to handle success state and tracking
 		window.addEventListener('DOMContentLoaded', function () {
+			console.log('🎯 Verificando status de sucesso...');
 			var urlParams = new URLSearchParams(window.location.search);
 
 			// 1. Check for success status
 			if (urlParams.get('status') === 'success') {
+				console.log('✅ Status=success detectado!');
 				// Show Modal
 				var modal = document.getElementById('successModal');
+				console.log('Modal encontrado:', modal);
 				if (modal) {
 					modal.style.display = 'flex';
+					console.log('🎉 Modal exibido!');
 				}
 
 				// Fire Google Ads Conversion
 				if (typeof gtag === 'function') {
+					console.log('📊 Disparando pixel de conversão...');
 					gtag('event', 'conversion', {
 						'send_to': 'AW-852350021/l_cQCI3B0d4bEMWot5YD',
 						'transaction_id': Date.now()
@@ -1857,6 +1862,9 @@
 				// Clean URL (remove ?status=success)
 				var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
 				window.history.pushState({ path: newUrl }, '', newUrl);
+				console.log('🧹 URL limpa');
+			} else {
+				console.log('ℹ️ Nenhum status de sucesso detectado');
 			}
 		});
 	</script>
