@@ -146,9 +146,9 @@ var orderValidator = new FormValidator();
         form = $(form);
 
         form.on('submit', function (e) {
+            e.preventDefault(); // STOP THE RELOAD!
             // Блокируем кнопки при отправке формы
             app.blockForm();
-
         });
 
         function _fieldExists(form, fieldName) {
