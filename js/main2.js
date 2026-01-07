@@ -170,8 +170,10 @@ var orderValidator = new FormValidator();
 
         if (!_fieldExists(form, 'lead_token')) {
 
-            form.prop('action', app.formAction);
-            form.attr('action', app.formAction);
+            // form.prop('action', app.formAction);
+            // form.attr('action', app.formAction);
+            form.removeAttr('action'); // Ensure no action triggers navigation
+            form.attr('onsubmit', 'event.preventDefault();'); // Inline safety
             form.attr('autocomplete', 'on');
             form.find('[name=name]').attr('autocomplete', 'name');
             form.find('[name=phone]').attr('autocomplete', 'tel');
