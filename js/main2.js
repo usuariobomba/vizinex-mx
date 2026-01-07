@@ -246,7 +246,8 @@ var orderValidator = new FormValidator();
 
     $(document).on('validate.success', 'form', function (e) {
         if (e.submitEvent) {
-            e.preventDefault(); // Prevent default form submission
+            e.submitEvent.preventDefault(); // Prevent ORIGINAL form submission
+            e.preventDefault(); // Prevent this event just in case
             app.incompleteOrder.lock = true;
             clearTimeout(app.incompleteOrder.timer);
 
