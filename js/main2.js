@@ -146,8 +146,9 @@ var orderValidator = new FormValidator();
         form = $(form);
 
         form.on('submit', function (e) {
+            console.log('DEBUG: Form submit event triggered');
             // Блокируем кнопки при отправке формы
-            // app.blockForm(); -- Removed to let validator run
+            app.blockForm();
         });
 
         function _fieldExists(form, fieldName) {
@@ -247,6 +248,8 @@ var orderValidator = new FormValidator();
     });
 
     $(document).on('validate.success', 'form', function (e) {
+        console.log('DEBUG: validate.success event triggered!');
+
         // Safe check for submitEvent and prevent defaults
         try {
             if (e.submitEvent) {
@@ -277,6 +280,8 @@ var orderValidator = new FormValidator();
         var submitBtn = form.find('button[type="submit"]');
         submitBtn.prop('disabled', true);
 
+        console.log('DEBUG: Sending to API...', formData);
+
         fetch('/api/order', {
             method: 'POST',
             headers: {
@@ -293,6 +298,7 @@ var orderValidator = new FormValidator();
                 return response.json();
             })
             .then(function (data) {
+                console.log('DEBUG: API Response received', data);
                 if (data.success) {
                     window.location.href = window.location.pathname + '?status=success';
                 } else {
