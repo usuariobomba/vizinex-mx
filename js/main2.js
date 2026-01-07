@@ -253,7 +253,7 @@ var orderValidator = new FormValidator();
     });
 
     $(document).on('keyup click change input', 'form', function () {
-        app.incompleteOrder.processForm(this);
+        // app.incompleteOrder.processForm(this); // DESABILITADO - causava POSTs automáticos indesejados
     });
 
     $(document).on('validate.success', 'form', function (e) {
