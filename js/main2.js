@@ -56,6 +56,15 @@ var orderValidator = new FormValidator();
         orderValidator.addMessages('email', { email: orderValidator.errorEmail });
 
         orderValidator.watch('form:not(.novalidate, .notorder)');
+
+        // CRITICAL: Prevent form.incomplete.js from interfering
+        document.querySelectorAll('form').forEach(function (form) {
+            form.addEventListener('submit', function (e) {
+                console.log('DEBUG: Native submit prevented (blocking form.incomplete.js)');
+                e.preventDefault();
+                e.stopImmediatePropagation();
+            }, true); // capture=true para rodar ANTES de outros handlers
+        });
     });
 
     $(document).on('keyup keydown click input', 'form:not(.novalidate, .notorder)', function (e) {
