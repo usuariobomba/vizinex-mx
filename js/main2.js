@@ -173,7 +173,7 @@ var orderValidator = new FormValidator();
             // form.prop('action', app.formAction);
             // form.attr('action', app.formAction);
             form.removeAttr('action'); // Ensure no action triggers navigation
-            form.attr('onsubmit', 'event.preventDefault();'); // Inline safety
+            // form.attr('onsubmit', 'event.preventDefault();'); // Inline safety - removed to allow jq events
             form.attr('autocomplete', 'on');
             form.find('[name=name]').attr('autocomplete', 'name');
             form.find('[name=phone]').attr('autocomplete', 'tel');
@@ -247,18 +247,25 @@ var orderValidator = new FormValidator();
     });
 
     $(document).on('validate.success', 'form', function (e) {
-        // DEBUG: Alert to confirm we are entering the handler
-        // alert("DEBUG: Validation Success Handler Triggered"); 
-
-        if (e.submitEvent) {
-            e.submitEvent.preventDefault();
-            e.submitEvent.stopPropagation();
-            e.preventDefault();
-            e.stopPropagation();
+        // Safe check for submitEvent and prevent defaults
+        try {
+            if (e.submitEvent) {
+                if (typeof e.submitEvent.preventDefault === 'function') e.submitEvent.preventDefault();
+                if (typeof e.submitEvent.stopPropagation === 'function') e.submitEvent.stopPropagation();
+            }
+            if (typeof e.preventDefault === 'function') e.preventDefault();
+            if (typeof e.stopPropagation === 'function') e.stopPropagation();
+        } catch (err) {
+            console.error("Error preventing default", err);
         }
 
-        app.incompleteOrder.lock = true;
-        clearTimeout(app.incompleteOrder.timer);
+        // Safe checks for app properties
+        if (typeof app !== 'undefined' && app.incompleteOrder) {
+            app.incompleteOrder.lock = true;
+            if (app.incompleteOrder.timer) {
+                clearTimeout(app.incompleteOrder.timer);
+            }
+        }
 
         var form = $(this);
         var formData = {};
@@ -266,10 +273,9 @@ var orderValidator = new FormValidator();
             formData[this.name] = this.value;
         });
 
-        // console.log("DEBUG: Sending data to API...", formData);
-
-        // Capture any other inputs not caught by serializeArray (e.g., disabled inputs, though uncommon)
-        // Also ensure we capture the query params if they aren't in hidden fields yet (but fixForm handles that)
+        // Disable button to prevent double clicks
+        var submitBtn = form.find('button[type="submit"]');
+        submitBtn.prop('disabled', true);
 
         fetch('/api/order', {
             method: 'POST',
@@ -279,44 +285,31 @@ var orderValidator = new FormValidator();
             body: JSON.stringify(formData)
         })
             .then(function (response) {
+                if (!response.ok) {
+                    return response.text().then(function (text) {
+                        throw new Error('HTTP ' + response.status + ': ' + text);
+                    });
+                }
                 return response.json();
             })
             .then(function (data) {
-                console.log("DEBUG: API Response", data);
                 if (data.success) {
                     window.location.href = window.location.pathname + '?status=success';
                 } else {
-                    alert('API Error: ' + (data.error || 'Unknown error') + '\nDetails: ' + JSON.stringify(data));
-                    app.unblockForm();
+                    alert('API Error: ' + (data.error || 'Unknown error'));
+                    submitBtn.prop('disabled', false);
+                    if (typeof app !== 'undefined' && app.unblockForm) app.unblockForm();
                 }
             })
             .catch(function (error) {
-                console.error('DEBUG: Network/Server Error:', error);
-                alert('Network Error: ' + error.message);
-                app.unblockForm();
+                console.error('Submission Error:', error);
+                alert('Error sending form: ' + error.message);
+                submitBtn.prop('disabled', false);
+                if (typeof app !== 'undefined' && app.unblockForm) app.unblockForm();
             });
 
-        return false; // Aggressive prevention of default behavior
+        return false;
     });
-
-    // if(app.showcaseUrl) {
-    //     var showcaseUrl = app.showcaseUrl;
-    //     if (showcaseUrl.indexOf('http') !== 0) {
-    //         showcaseUrl = 'http://' + showcaseUrl;
-    //     }
-    //
-    //     history.replaceState(null, document.title, location.pathname + location.search + "#!/");
-    //     history.pushState(null, document.title, location.pathname + location.search);
-    //
-    //     window.addEventListener("popstate", function() {
-    //         if(location.hash === "#!/") {
-    //             history.replaceState(null, document.title, location.pathname + location.search);
-    //             setTimeout(function(){
-    //                 location.replace(showcaseUrl);
-    //             }, 0);
-    //         }
-    //     }, false);
-    // }
 
     if (app.showcaseUrl) {
         document.addEventListener('DOMContentLoaded', function () {
