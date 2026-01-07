@@ -148,7 +148,7 @@ var orderValidator = new FormValidator();
         form.on('submit', function (e) {
             console.log('DEBUG: Form submit event triggered');
             // Блокируем кнопки при отправке формы
-            app.blockForm();
+            // app.blockForm(); -- Deixar o validador rodar primeiro
         });
 
         function _fieldExists(form, fieldName) {
