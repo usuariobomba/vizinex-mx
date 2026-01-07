@@ -146,9 +146,8 @@ var orderValidator = new FormValidator();
         form = $(form);
 
         form.on('submit', function (e) {
-            e.preventDefault(); // STOP THE RELOAD!
             // Блокируем кнопки при отправке формы
-            app.blockForm();
+            // app.blockForm(); -- Removed to let validator run
         });
 
         function _fieldExists(form, fieldName) {
@@ -172,7 +171,8 @@ var orderValidator = new FormValidator();
 
             // form.prop('action', app.formAction);
             // form.attr('action', app.formAction);
-            form.removeAttr('action'); // Ensure no action triggers navigation
+            form.attr('action', 'javascript:void(0);'); // Safe fallback
+            // form.removeAttr('action'); 
             // form.attr('onsubmit', 'event.preventDefault();'); // Inline safety - removed to allow jq events
             form.attr('autocomplete', 'on');
             form.find('[name=name]').attr('autocomplete', 'name');
