@@ -245,46 +245,56 @@ var orderValidator = new FormValidator();
     });
 
     $(document).on('validate.success', 'form', function (e) {
-        if (e.submitEvent) {
-            e.submitEvent.preventDefault(); // Prevent ORIGINAL form submission
-            e.preventDefault(); // Prevent this event just in case
-            app.incompleteOrder.lock = true;
-            clearTimeout(app.incompleteOrder.timer);
+        // DEBUG: Alert to confirm we are entering the handler
+        // alert("DEBUG: Validation Success Handler Triggered"); 
 
-            var form = $(this);
-            var formData = {};
-            $.each(form.serializeArray(), function () {
-                formData[this.name] = this.value;
+        if (e.submitEvent) {
+            e.submitEvent.preventDefault();
+            e.submitEvent.stopPropagation();
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+
+        var form = $(this);
+        var formData = {};
+        $.each(form.serializeArray(), function () {
+            formData[this.name] = this.value;
+        });
+
+        // console.log("DEBUG: Sending data to API...", formData);
+
+        // Capture any other inputs not caught by serializeArray (e.g., disabled inputs, though uncommon)
+        // Also ensure we capture the query params if they aren't in hidden fields yet (but fixForm handles that)
+
+        fetch('/api/order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log("DEBUG: API Response", data);
+                if (data.success) {
+                    window.location.href = window.location.pathname + '?status=success';
+                } else {
+                    alert('API Error: ' + (data.error || 'Unknown error') + '\nDetails: ' + JSON.stringify(data));
+                    app.unblockForm();
+                }
+            })
+            .catch(function (error) {
+                console.error('DEBUG: Network/Server Error:', error);
+                alert('Network Error: ' + error.message);
+                app.unblockForm();
             });
 
-            // Capture any other inputs not caught by serializeArray (e.g., disabled inputs, though uncommon)
-            // Also ensure we capture the query params if they aren't in hidden fields yet (but fixForm handles that)
-
-            fetch('/api/order', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    if (data.success) {
-                        // Success! Redirect to self with status=success to trigger modal and pixel
-                        window.location.href = window.location.pathname + '?status=success';
-                    } else {
-                        alert('Error: ' + (data.error || 'Unknown error'));
-                        app.unblockForm();
-                    }
-                })
-                .catch(function (error) {
-                    console.error('Error:', error);
-                    alert('Ocurrió un error al enviar el formulario. Por favor intente nuevamente.');
-                    app.unblockForm();
-                });
-        }
+        return false; // Aggressive prevention of default behavior
     });
 
     // if(app.showcaseUrl) {
