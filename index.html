@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="es"
+	data-scrapbook-source="https://nohavewho.github.io/whocpapages.pp.github.io/MX/Vizinex/mx_vizinex_prelanding%20land_2_bf-790/index.html#ordina"
+	data-scrapbook-create="20250213075824113">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Ads: 852350021 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-852350021"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'AW-852350021');
+	</script>
+
+	<script src="js/jquery.min.js"></script>
+
+	<script>
+		function set_validator_errors() {
+			orderValidator.errorTitle = 'Пожалуйста, исправьте следующие ошибки';
+
+			orderValidator.errorNameField = 'Имя';
+			orderValidator.errorNameMess = 'Укажите своё имя';
+
+			orderValidator.errorPhoneField = 'Телефон для связи';
+			orderValidator.errorPhoneMess = 'Введите правильный телефон';
+
+			orderValidator.errorAddress = 'Введите правильный адрес';
+			orderValidator.errorRequired = 'обязательное поле';
+			orderValidator.errorMaxLength = 'допустимо максимум {1} символа';
+			orderValidator.errorMinLength = 'допустимо минимум {1} символа';
+			orderValidator.errorEmailField = 'E-mail';
+			orderValidator.errorEmail = 'указан не корректный email';
+		}
+	</script>
+
+	<script>
+
+
+		window.app = {
+			timestamp: parseInt((new Date()).getTime() / 1000),
+			jq: jQuery,
+			formAction: window.location.href,
+			leadToken: '695ebbbcd90093.98379204',
+			offers: { "20414": { "id": 20414, "country": { "code": "MX", "name": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430" }, "price": "790", "price2": "1580", "currency": { "code": "MXN", "name": "MXN" }, "discount": "", "delivery_price": "", "link": "", "product_sku": "", "prepaid_info_html": "" } },
+			currentOffer: { "id": 20414, "country": { "code": "MX", "name": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430" }, "price": "790", "price2": "1580", "currency": { "code": "MXN", "name": "MXN" }, "discount": "", "delivery_price": "", "link": "", "product_sku": "", "prepaid_info_html": "" },
+			allowedCountries: ["MX"],
+			_setOfferId: false,
+			streamHid: 'wV6UOX80',
+			showcaseUrl: '',
+			disablePhoneMask: Boolean(),
+
+			setOffer: function (offerId) {
+				if (offerId == this._setOfferId) {
+					return;
+				}
+				this._setOfferId = offerId;
+				if (offerId) {
+					var offer = app.offers[offerId];
+					var previousOffer = app.currentOffer;
+					app.currentOffer = offer;
+					var event = this.jq.Event("offerchange");
+					event.previousOffer = previousOffer;
+					event.currentOffer = app.currentOffer;
+					this.jq(document).trigger(event);
+					this.updatePage(offer);
+				} else {
+					$('input[name=country]').val('');
+				}
+			},
+
+			updatePage: function (offer) {
+				$('x-newprice').html(offer.price);
+				$('x-oldprice').html(offer.price2);
+				$('x-currency').html(offer.currency.name);
+				$('input[name=offer], select[name=offer]').val(offer.id);
+				$('input[name=country]').val(offer.country.code);
+			},
+
+			blockForm: function () {
+				// Блокируем кнопки при отправке формы
+				$('input[type=submit]', $(this)).prop('disabled', true).attr('disabled', true);
+				$('button', $(this)).prop('disabled', true).attr('disabled', true);
+				app.incompleteOrder.lock = true;
+				clearTimeout(app.incompleteOrder.timer);
+			},
+
+			unblockForm: function () {
+				$('input[type=submit]', $(this)).prop('disabled', false).attr('disabled', false);
+				$('button[type=submit]', $(this)).prop('disabled', false).attr('disabled', false);
+				app.incompleteOrder.lock = false;
+				clearTimeout(app.incompleteOrder.timer);
+			}
+
+		};
+
+
+	</script>
+	<script src="js/form.validate.js"></script>
+	<script src="js/interPhoneCodes.js"></script>
+	<script src="js/showcase.js"></script>
+	<script src="js/form.incomplete.js"></script>
+	<script src="js/main2.js"></script>
+
+
+
+	<link rel="shortcut icon" href="images/visiorax.webp" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vizinex MX</title>
+	<meta name="robots" content="max-image-preview:large">
+
+	<link rel="stylesheet" id="elementor-frontend-css" href="css/style.css" media="all">
+	<script src="js/jquery.min_1.js"></script>
+</head>
+
+<body
+	class="page-template-default page page-id-1974 elementor-default elementor-kit-7 elementor-page elementor-page-1974">
+
+	<a class="skip-link screen-reader-text" href="#content">Vai al contenuto</a>
+
+
+	<main id="content" class="site-main post-1974 page type-page status-publish hentry">
+
+
+		<div class="page-content">
+			<div data-elementor-type="wp-page" data-elementor-id="1974" class="elementor elementor-1974"
+				data-elementor-post-type="page">
+				<div class="elementor-section elementor-top-section elementor-element elementor-element-5a59cdcf elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default"
+					data-id="5a59cdcf" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-64dfd1a7"
+							data-id="64dfd1a7" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-3cb29e89 elementor-widget elementor-widget-heading"
+									data-id="3cb29e89" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<p class="elementor-heading-title elementor-size-default">Vizinex</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1b85e419"
+							data-id="1b85e419" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-f756bcb elementor-align-center elementor-invisible elementor-widget elementor-widget-button"
+									data-id="f756bcb" data-element_type="widget" data-widget_type="button.default">
+									<div class="elementor-widget-container">
+										<div class="elementor-button-wrapper">
+											<a class="elementor-button elementor-button-link elementor-size-xs"
+												href="#ordina">
+												<span class="elementor-button-content-wrapper">
+													<span class="elementor-button-text">Pide ahora</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4e4e3ba2"
+							data-id="4e4e3ba2" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1cbde199 elementor-widget elementor-widget-heading"
+									data-id="1cbde199" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<p class="elementor-heading-title elementor-size-default">Pago Cuando Recibes.
+											Envío Rapido</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2553b789"
+							data-id="2553b789" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-66bcffa9 elementor-star-rating--align-right elementor-star-rating-mobile--align-center elementor--star-style-star_fontawesome elementor-widget elementor-widget-star-rating"
+									data-id="66bcffa9" data-element_type="widget"
+									data-widget_type="star-rating.default">
+									<div class="elementor-widget-container">
+
+										<div class="elementor-star-rating__wrapper">
+											<div class="elementor-star-rating__title"> Calificación del cliente:</div>
+											<div><i class="fa-solid fa-star" style="color: #FFD43B;"><svg fill="#FFD43B"
+														xmlns="http://www.w3.org/2000/svg" height="24"
+														viewBox="0 -960 960 960" width="24">
+														<path
+															d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z">
+														</path>
+													</svg></i><i class="fa-solid fa-star" style="color: #FFD43B;"><svg
+														fill="#FFD43B" xmlns="http://www.w3.org/2000/svg" height="24"
+														viewBox="0 -960 960 960" width="24">
+														<path
+															d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z">
+														</path>
+													</svg></i><i class="fa-solid fa-star" style="color: #FFD43B;"><svg
+														fill="#FFD43B" xmlns="http://www.w3.org/2000/svg" height="24"
+														viewBox="0 -960 960 960" width="24">
+														<path
+															d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z">
+														</path>
+													</svg></i><i class="fa-solid fa-star" style="color: #FFD43B;"><svg
+														fill="#FFD43B" xmlns="http://www.w3.org/2000/svg" height="24"
+														viewBox="0 -960 960 960" width="24">
+														<path
+															d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z">
+														</path>
+													</svg></i><i class="fa-solid fa-star" style="color: #FFD43B;"><svg
+														fill="#FFD43B" xmlns="http://www.w3.org/2000/svg" height="24"
+														viewBox="0 -960 960 960" width="24">
+														<path
+															d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z">
+														</path>
+													</svg></i></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="elementor-section elementor-top-section elementor-element elementor-element-33567a8d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="33567a8d" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-43f8b65c"
+							data-id="43f8b65c" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-3c19f0b8 elementor-widget elementor-widget-heading"
+									data-id="3c19f0b8" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<p class="elementor-heading-title elementor-size-default">Vizinex</p>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-5cf29d6 elementor-widget elementor-widget-heading"
+									data-id="5cf29d6" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<p class="elementor-heading-title elementor-size-default">La Solución a los
+											Problemas de Visión que Te Permite Volver a Tener una Visión Perfecta</p>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-66caf9dc elementor-widget elementor-widget-image"
+									data-id="66caf9dc" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img class="img" decoding="async" src="images/visiorax.webp" title="visiorax"
+											alt="visiorax" loading="lazy">
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-4b9ba05d elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+									data-id="4b9ba05d" data-element_type="widget" data-widget_type="button.default">
+									<div class="elementor-widget-container">
+										<div class="elementor-button-wrapper">
+											<a class="elementor-button elementor-button-link elementor-size-md"
+												href="#ordina">
+												<span class="elementor-button-content-wrapper">
+													<span class="elementor-button-text">COMPRAR CON DESCUENTO</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5b27fce2"
+							data-id="5b27fce2" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-4dd7adc7 elementor-align-left elementor-mobile-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+									data-id="4dd7adc7" data-element_type="widget" data-widget_type="icon-list.default">
+									<div class="elementor-widget-container">
+										<ul class="elementor-icon-list-items">
+											<li class="elementor-icon-list-item">
+												<span class="elementor-icon-list-icon">
+													<i aria-hidden="true" class="fas fa-check-circle"></i> </span>
+												<span class="elementor-icon-list-text">Alivia la tensión y el dolor de
+													ojos</span>
+											</li>
+											<li class="elementor-icon-list-item">
+												<span class="elementor-icon-list-icon">
+													<i aria-hidden="true" class="fas fa-check-circle"></i> </span>
+												<span class="elementor-icon-list-text">Aumenta la agudeza visual</span>
+											</li>
+											<li class="elementor-icon-list-item">
+												<span class="elementor-icon-list-icon">
+													<i aria-hidden="true" class="fas fa-check-circle"></i> </span>
+												<span class="elementor-icon-list-text">Ayuda a aliviar la fatiga
+													ocular</span>
+											</li>
+											<li class="elementor-icon-list-item">
+												<span class="elementor-icon-list-icon">
+													<i aria-hidden="true" class="fas fa-check-circle"></i> </span>
+												<span class="elementor-icon-list-text">Fortalece los músculos oculares y
+													los vasos sanguíneos</span>
+											</li>
+											<li class="elementor-icon-list-item">
+												<span class="elementor-icon-list-icon">
+													<i aria-hidden="true" class="fas fa-check-circle"></i> </span>
+												<span class="elementor-icon-list-text">Previene el desarrollo de
+													enfermedades oculares</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-6c4ed876 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+									data-id="6c4ed876" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-d5bbb54"
+											data-id="d5bbb54" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-407b687b elementor-widget elementor-widget-heading"
+													data-id="407b687b" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<p class="elementor-heading-title elementor-size-default">Precio
+															inicial</p>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-52f36083 elementor-widget elementor-widget-heading"
+													data-id="52f36083" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<p class="elementor-heading-title elementor-size-default">
+															<x-oldprice>1580</x-oldprice> <x-currency>MXN</x-currency>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-51f443e"
+											data-id="51f443e" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-60297e48 elementor-view-default elementor-widget elementor-widget-icon"
+													data-id="60297e48" data-element_type="widget"
+													data-widget_type="icon.default">
+													<div class="elementor-widget-container">
+														<div class="elementor-icon-wrapper">
+															<div class="elementor-icon">
+																<i aria-hidden="true" class="fas fa-arrow-right"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7d032b33"
+											data-id="7d032b33" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2c8120e7 elementor-widget elementor-widget-heading"
+													data-id="2c8120e7" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<p class="elementor-heading-title elementor-size-default">OFERTA
+														</p>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-4ab4632 elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline"
+													data-id="4ab4632" data-element_type="widget"
+													data-widget_type="animated-headline.default">
+													<div class="elementor-widget-container">
+														<h3 class="elementor-headline">
+															<span
+																class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+																<span
+																	class="elementor-headline-dynamic-text elementor-headline-text-active"><x-newprice>790</x-newprice>
+																	<x-currency>MXN</x-currency></span>
+															</span>
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-21fd19a1"
+											data-id="21fd19a1" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2708c483 elementor-align-left elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+													data-id="2708c483" data-element_type="widget"
+													data-widget_type="icon-list.default">
+													<div class="elementor-widget-container">
+														<ul class="elementor-icon-list-items">
+															<li class="elementor-icon-list-item">
+																<span class="elementor-icon-list-icon">
+																	<i aria-hidden="true" class="fas fa-truck"></i>
+																</span>
+																<span class="elementor-icon-list-text"><b> Envío
+																		rapido</b></span>
+															</li>
+															<li class="elementor-icon-list-item">
+																<span class="elementor-icon-list-icon">
+																	<i aria-hidden="true"
+																		class="fas fa-money-bill-wave"></i> </span>
+																<span class="elementor-icon-list-text"><b>Paga cuando
+																		recibes</b> </span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="elementor-section elementor-top-section elementor-element elementor-element-2215870e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="2215870e" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-39e235be"
+							data-id="39e235be" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-422dfb48 elementor-widget elementor-widget-text-editor"
+									data-id="422dfb48" data-element_type="widget"
+									data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<p><b>¿Cómo cambiará tu visión con <span class="b-green">Vizinex?</span></b>
+										</p>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-56bb6f11 elementor-widget elementor-widget-text-editor"
+									data-id="56bb6f11" data-element_type="widget"
+									data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<p>Desliza con el dedo para ver el resultado:</p>
+									</div>
+								</div>
+								<div class="elementor-section elementor-inner-section elementor-element elementor-element-103023f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="103023f" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3b602e2e"
+											data-id="3b602e2e" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-4a5aab5 elementor-arrows-position-inside elementor-pagination-position-outside elementor-widget elementor-widget-image-carousel"
+													data-id="4a5aab5" data-element_type="widget"
+													data-widget_type="image-carousel.default">
+													<div class="elementor-widget-container">
+														<div class="elementor-image-carousel-wrapper swiper" dir="ltr">
+															<div class="elementor-image-carousel swiper-wrapper"
+																aria-live="off">
+																<div class="swiper-slide" role="group"
+																	aria-roledescription="slide" aria-label="1 di 4">
+																	<figure class="swiper-slide-inner"><img
+																			decoding="async" class="swiper-slide-image"
+																			src="images/Schermata-2022-09-23-alle-17.52.35.png"
+																			alt="Schermata-2022-09-23-alle-17.52.35.png">
+																	</figure>
+																</div>
+																<div class="swiper-slide" role="group"
+																	aria-roledescription="slide" aria-label="2 di 4">
+																	<figure class="swiper-slide-inner"><img
+																			decoding="async" class="swiper-slide-image"
+																			src="images/Schermata-2022-09-23-alle-17.53.02.png"
+																			alt="Schermata-2022-09-23-alle-17.53.02.png">
+																	</figure>
+																</div>
+																<div class="swiper-slide" role="group"
+																	aria-roledescription="slide" aria-label="3 di 4">
+																	<figure class="swiper-slide-inner"><img
+																			decoding="async" class="swiper-slide-image"
+																			src="images/Schermata-2022-09-23-alle-17.53.12.png"
+																			alt="Schermata-2022-09-23-alle-17.53.12.png">
+																	</figure>
+																</div>
+																<div class="swiper-slide" role="group"
+																	aria-roledescription="slide" aria-label="4 di 4">
+																	<figure class="swiper-slide-inner"><img
+																			decoding="async" class="swiper-slide-image"
+																			src="images/Schermata-2022-09-23-alle-17.53.20.png"
+																			alt="Schermata-2022-09-23-alle-17.53.20.png">
+																	</figure>
+																</div>
+															</div>
+															<div class="elementor-swiper-button elementor-swiper-button-prev"
+																role="button" tabindex="0">
+																<i aria-hidden="true" class="eicon-chevron-left"></i>
+															</div>
+															<div class="elementor-swiper-button elementor-swiper-button-next"
+																role="button" tabindex="0">
+																<i aria-hidden="true" class="eicon-chevron-right"></i>
+															</div>
+
+															<div class="swiper-pagination"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-205949a3 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="205949a3" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-23a95541"
+							data-id="23a95541" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-ed7c22b elementor-widget elementor-widget-image"
+									data-id="ed7c22b" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img loading="lazy" decoding="async" width="536" height="465"
+											src="images/Schermata_2022-09-23_alle_17.59.29-removebg-preview.png"
+											class="attachment-large size-large wp-image-1924" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6ffb8f1c"
+							data-id="6ffb8f1c" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-675e4909 elementor-widget elementor-widget-heading"
+									data-id="675e4909" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">¡La causa principal
+											de una mala visión <b>es el mal funcionamento los músculos de los ojos!</b>!
+										</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-8fb7798 elementor-widget elementor-widget-text-editor"
+									data-id="8fb7798" data-element_type="widget" data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<ul>
+											<li><b>El sistema muscular enfoca los ojos</b> de tal manera que la imagen
+												que pasa a través del cristalino se proyecta en la retina.</li>
+										</ul>
+										<p></p>
+										<ul>
+											<li><b>El trastorno del músculo ocular</b> da como resultado una compresión
+												insuficiente o excesiva del globo ocular.</li>
+										</ul>
+										<p></p>
+										<ul>
+											<li><b>El cristalino está deformado</b> y el foco está distorsionado, por lo
+												que ya no puedes ver con claridad.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-376e31b3 elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+									data-id="376e31b3" data-element_type="widget" data-widget_type="button.default">
+									<div class="elementor-widget-container">
+										<div class="elementor-button-wrapper">
+											<a class="elementor-button elementor-button-link elementor-size-md"
+												href="#ordina">
+												<span class="elementor-button-content-wrapper">
+													<span class="elementor-button-text">PIDE AHORA <br>
+														<span style="color: white;"> PAGO CUANDO RECIBES
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="elementor-section elementor-top-section elementor-element elementor-element-2cb045ff elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="2cb045ff" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-79130fd9"
+							data-id="79130fd9" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-section elementor-inner-section elementor-element elementor-element-7af43329 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="7af43329" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-595f0b1"
+											data-id="595f0b1" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2aae0e11 elementor-widget elementor-widget-image"
+													data-id="2aae0e11" data-element_type="widget"
+													data-widget_type="image.default">
+													<div class="elementor-widget-container">
+														<img loading="lazy" decoding="async" width="800" height="370"
+															src="images/Schermata-2022-09-23-alle-17.44.55.png"
+															class="attachment-large size-large wp-image-1925" alt="">
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-42b6f9cd elementor-widget elementor-widget-text-editor"
+													data-id="42b6f9cd" data-element_type="widget"
+													data-widget_type="text-editor.default">
+													<div class="elementor-widget-container">
+														<p>Lo principal para tener una visión normal es<b> una buena
+																elasticidad del cristalino</b>. Desafortunadamente, esta
+															cualidad disminuyebajo la influencia de muchos factores:
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-7e481767 elementor-widget elementor-widget-image"
+									data-id="7e481767" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img loading="lazy" decoding="async" width="800" height="430"
+											src="images/Schermata-2022-09-23-alle-17.46.46.png"
+											class="attachment-large size-large wp-image-1926" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4d5ae1d2"
+							data-id="4d5ae1d2" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-5cc0a6af elementor-widget elementor-widget-image"
+									data-id="5cc0a6af" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img loading="lazy" decoding="async" width="500" height="572"
+											src="images/b2-image.png" class="attachment-large size-large wp-image-1927"
+											alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-7cd40eaa elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="7cd40eaa" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-31990b35"
+							data-id="31990b35" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-cfd5131 elementor-widget elementor-widget-heading"
+									data-id="cfd5131" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">UN PRODUCTO INNOVADOR
+											PARA
+											RESTAURAR LA VISIÓN</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-49df8d32 elementor-widget elementor-widget-image"
+									data-id="49df8d32" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img loading="lazy" decoding="async" width="800" height="365"
+											src="images/Aggiungi-unintestazione.png"
+											class="attachment-large size-large wp-image-1928" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4fdf2583"
+							data-id="4fdf2583" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-6065d74b elementor-widget elementor-widget-text-editor"
+									data-id="6065d74b" data-element_type="widget"
+									data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<p>Vizinex es un complejo nutritivo de extractos naturales que tienen un efecto
+											direccional en caso de reducción de la visión y combaten por completo las
+											enfermedades más comunes del ojo humano.</p>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-23e944f9 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-text-editor"
+									data-id="23e944f9" data-element_type="widget"
+									data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<ul class="block-5_list">
+											<li><b>Luteína</b>: protege la retina</li>
+											<li><b>Arándanos</b>: ayudan a reconstruir la retina</li>
+											<li><b>Zeaxantina</b>: ayuda a mantener los músculos de los ojos saludables
+												y a reducir la fatiga</li>
+											<li><b>Vitaminas</b>: mejoran la claridad de los ojos</li>
+											<li><b>Minerales</b>: fortalecen los capilares y las venas de los ojos</li>
+										</ul>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-2159a985 elementor-widget elementor-widget-text-editor"
+									data-id="2159a985" data-element_type="widget"
+									data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<p>Son las únicas gotas orales que regulan la función de los músculos del globo
+											ocular, ayudando a restablecer el enfoque y a recuperar una visión clara,
+											brillante y tridimensional.</p>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-737f294b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+									data-id="737f294b" data-element_type="widget" data-widget_type="button.default">
+									<div class="elementor-widget-container">
+										<div class="elementor-button-wrapper">
+											<a class="elementor-button elementor-button-link elementor-size-md"
+												href="#ordina">
+												<span class="elementor-button-content-wrapper">
+													<span class="elementor-button-text">PIDE AHORA <br>
+														<span style="color: white;"> ENVIO GRATIS
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-400d7355 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="400d7355" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-c7199af"
+							data-id="c7199af" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-729d885d elementor-widget elementor-widget-image"
+									data-id="729d885d" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img decoding="async" src="images/head_slider_3.jpg" title="head_slider_3.jpeg"
+											alt="head_slider_3.jpeg" loading="lazy">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5d3e7907"
+							data-id="5d3e7907" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-203f0253 elementor-widget elementor-widget-heading"
+									data-id="203f0253" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">Recomendamos
+											aprovechar la <b>Oferta de Lanzamiento</b> que el fabricante ha puesto a
+											disposición solo para clientes de México: </h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-586dddab elementor-widget elementor-widget-heading"
+									data-id="586dddab" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default"><b>Vizinex en Oferta
+												por solo
+												<x-newprice>790</x-newprice><x-currency>MXN</x-currency></b><br> Pago
+											Contra Contraentrega y Envío Rapido</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-2ec0afaf elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+									data-id="2ec0afaf" data-element_type="widget" data-widget_type="button.default">
+									<div class="elementor-widget-container">
+										<div class="elementor-button-wrapper">
+											<a class="elementor-button elementor-button-link elementor-size-md"
+												href="#ordina">
+												<span class="elementor-button-content-wrapper">
+													<span class="elementor-button-text">PIDE AHORA <br>
+														<span style="color: white;"> PAGO CUANDO RECIBES
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6c100849"
+							data-id="6c100849" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-e7c407f elementor-widget elementor-widget-image"
+									data-id="e7c407f" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img decoding="async" src="images/visiorax.webp" title="visiorax" alt="visiorax"
+											loading="lazy">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-18c38b2a elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="18c38b2a" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2a377ce6"
+							data-id="2a377ce6" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1afb67cb elementor-widget elementor-widget-image"
+									data-id="1afb67cb" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img loading="lazy" decoding="async" width="800" height="374"
+											src="images/Schermata-2022-09-23-alle-17.28.32.png"
+											class="attachment-large size-large wp-image-1930" alt="">
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-5249c065 elementor-widget elementor-widget-heading"
+									data-id="5249c065" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">Relajan los músculos
+											del ojo, lo que conduce a su deformación y solo exacerba el problema.</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1bcd7260"
+							data-id="1bcd7260" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-68b207f6 elementor-widget elementor-widget-image"
+									data-id="68b207f6" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img loading="lazy" decoding="async" width="487" height="366"
+											src="images/b4-image-1.jpeg"
+											class="attachment-large size-large wp-image-1931" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="elementor-section elementor-top-section elementor-element elementor-element-4de08cda elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="4de08cda" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-116079c3"
+							data-id="116079c3" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-76813e1 elementor-widget elementor-widget-heading"
+									data-id="76813e1" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<p class="elementor-heading-title elementor-size-default">Acción de Vizinex</p>
+									</div>
+								</div>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-1aef4d21 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="1aef4d21" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-3853ebd7"
+											data-id="3853ebd7" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-323adb31 elementor-widget elementor-widget-image"
+													data-id="323adb31" data-element_type="widget"
+													data-widget_type="image.default">
+													<div class="elementor-widget-container">
+														<img loading="lazy" src="images/effect_1.png" alt="">
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-400d0d73 elementor-widget elementor-widget-heading"
+													data-id="400d0d73" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">
+															<b>Fortalecen los músculos visuales</b>
+														</h2>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-7f7d6ea8 elementor-widget elementor-widget-text-editor"
+													data-id="7f7d6ea8" data-element_type="widget"
+													data-widget_type="text-editor.default">
+													<div class="elementor-widget-container">
+														<p>Los componentes de Vizinex aumentan el tono del músculo
+															ciliar que soporta el cristalino y evitan que se tense
+															demasiado</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9ef30fc"
+											data-id="9ef30fc" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-1b581abc elementor-widget elementor-widget-image"
+													data-id="1b581abc" data-element_type="widget"
+													data-widget_type="image.default">
+													<div class="elementor-widget-container">
+														<img loading="lazy" decoding="async" width="192" height="192"
+															src="images/effect_2.png"
+															class="attachment-large size-large wp-image-1933" alt="">
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-49627359 elementor-widget elementor-widget-heading"
+													data-id="49627359" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default"><b>
+																Mejoran el suministro de sangre a los ojos </b></h2>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-66a7a576 elementor-widget elementor-widget-text-editor"
+													data-id="66a7a576" data-element_type="widget"
+													data-widget_type="text-editor.default">
+													<div class="elementor-widget-container">
+														<p>Estas gotas aumentan la elasticidad de las arterias
+															oftálmicas y estimulan el flujo sanguíneo hacia la retina y
+															la córnea</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-67865654"
+											data-id="67865654" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-7416b2fe elementor-widget elementor-widget-image"
+													data-id="7416b2fe" data-element_type="widget"
+													data-widget_type="image.default">
+													<div class="elementor-widget-container">
+														<img loading="lazy" decoding="async" width="192" height="192"
+															src="images/effect_3.png"
+															class="attachment-large size-large wp-image-1934" alt="">
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-6e5ec7ee elementor-widget elementor-widget-heading"
+													data-id="6e5ec7ee" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">
+															<b>Aumentan la claridad y el brillo de la visión </b>
+														</h2>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-2ce1a37f elementor-widget elementor-widget-text-editor"
+													data-id="2ce1a37f" data-element_type="widget"
+													data-widget_type="text-editor.default">
+													<div class="elementor-widget-container">
+														<p>Después de un ciclo de tratamiento con Vizinex, distinguirás
+															mejor los colores, verás los contornos de los objetos con
+															mayor claridad, leerás la letra pequeña y tus ojos no se
+															cansarán del trabajo prolongado delante del ordenador</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="elementor-section elementor-top-section elementor-element elementor-element-4aa8919f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="4aa8919f" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-72dfb18c"
+							data-id="72dfb18c" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1e9fe2b2 elementor-widget elementor-widget-heading"
+									data-id="1e9fe2b2" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<p class="elementor-heading-title elementor-size-default">Nuestros clientes no
+											pueden estar equivocados...</p>
+									</div>
+								</div>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-5add975e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="5add975e" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-497191cb"
+											data-id="497191cb" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-489aecb1 elementor-widget elementor-widget-heading"
+													data-id="489aecb1" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default elementor-inline-editing pen"
+															data-elementor-setting-key="title"
+															data-pen-placeholder="Digita qui..."
+															style="font-weight: var( --e-global-typography-primary-font-weight );">
+															4,283 Valoración de los clientes:</h2>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-758dfac9 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="758dfac9" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1a7d579f"
+											data-id="1a7d579f" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2d4c1c4 elementor-widget elementor-widget-heading"
+													data-id="2d4c1c4" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">5
+															Estrellas</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7fa18132"
+											data-id="7fa18132" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2edee291 elementor-widget elementor-widget-progress"
+													data-id="2edee291" data-element_type="widget"
+													data-widget_type="progress.default">
+													<div class="elementor-widget-container">
+
+														<div class="elementor-progress-wrapper" role="progressbar"
+															aria-valuemin="0" aria-valuemax="100" aria-valuenow="79">
+															<div class="elementor-progress-bar" data-max="79"
+																style="width: 79%; transition: width 1s ease-in-out;">
+																<span class="elementor-progress-text"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-6295ff21 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="6295ff21" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5ecfbf58"
+											data-id="5ecfbf58" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-8ea20d7 elementor-widget elementor-widget-heading"
+													data-id="8ea20d7" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">4
+															Estrellas</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-37db13d9"
+											data-id="37db13d9" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-a2cdd8b elementor-widget elementor-widget-progress"
+													data-id="a2cdd8b" data-element_type="widget"
+													data-widget_type="progress.default">
+													<div class="elementor-widget-container">
+
+														<div class="elementor-progress-wrapper" role="progressbar"
+															aria-valuemin="0" aria-valuemax="100" aria-valuenow="48">
+															<div class="elementor-progress-bar" data-max="48"
+																style="width: 48%; transition: width 1s ease-in-out;">
+																<span class="elementor-progress-text"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-6a009928 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="6a009928" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e4451a4"
+											data-id="e4451a4" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-f199639 elementor-widget elementor-widget-heading"
+													data-id="f199639" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">3
+															Estrallas</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6efb9381"
+											data-id="6efb9381" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-5fefc9d2 elementor-widget elementor-widget-progress"
+													data-id="5fefc9d2" data-element_type="widget"
+													data-widget_type="progress.default">
+													<div class="elementor-widget-container">
+
+														<div class="elementor-progress-wrapper" role="progressbar"
+															aria-valuemin="0" aria-valuemax="100" aria-valuenow="5">
+															<div class="elementor-progress-bar" data-max="5"
+																style="width: 5%; transition: width 1s ease-in-out;">
+																<span class="elementor-progress-text"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-4cc6d274 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="4cc6d274" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1468a5a7"
+											data-id="1468a5a7" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2d63bafa elementor-widget elementor-widget-heading"
+													data-id="2d63bafa" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">2
+															Estrellas</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-73ccb722"
+											data-id="73ccb722" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-78c3e001 elementor-widget elementor-widget-progress"
+													data-id="78c3e001" data-element_type="widget"
+													data-widget_type="progress.default">
+													<div class="elementor-widget-container">
+
+														<div class="elementor-progress-wrapper" role="progressbar"
+															aria-valuemin="0" aria-valuemax="100" aria-valuenow="3">
+															<div class="elementor-progress-bar" data-max="3"
+																style="width: 3%; transition: width 1s ease-in-out;">
+																<span class="elementor-progress-text"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-1d63bfe6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="1d63bfe6" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-34b71b1e"
+											data-id="34b71b1e" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-6073a57d elementor-widget elementor-widget-heading"
+													data-id="6073a57d" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">1
+															Estrella</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-defb27b"
+											data-id="defb27b" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-7761c8d4 elementor-widget elementor-widget-progress"
+													data-id="7761c8d4" data-element_type="widget"
+													data-widget_type="progress.default">
+													<div class="elementor-widget-container">
+
+														<div class="elementor-progress-wrapper" role="progressbar"
+															aria-valuemin="0" aria-valuemax="100" aria-valuenow="2">
+															<div class="elementor-progress-bar" data-max="2"
+																style="width: 2%; transition: width 1s ease-in-out;">
+																<span class="elementor-progress-text"></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<div class="elementor-section elementor-inner-section elementor-element elementor-element-4f23ac5e elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+									data-id="4f23ac5e" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6916b3ab"
+											data-id="6916b3ab" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-70fbe167 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews"
+													data-id="70fbe167" data-element_type="widget"
+													data-widget_type="reviews.default">
+													<div class="elementor-widget-container">
+														<div class="elementor-swiper">
+															<div class="elementor-main-swiper swiper">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide">
+																		<div
+																			class="elementor-testimonial elementor-repeater-item-5cd9594">
+																			<div class="elementor-testimonial__header">
+																				<div
+																					class="elementor-testimonial__image">
+																					<img decoding="async"
+																						src="images/4p1tp1b5g5veo.jpg"
+																						alt="Ana R.">
+																				</div>
+																				<div
+																					class="elementor-testimonial__cite">
+																					<span
+																						class="elementor-testimonial__name">Ana
+																						R.</span>
+																					<div><i class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i>
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__icon elementor-icon elementor-icon-facebook-f">
+																					<i aria-hidden="true"
+																						class="fab fa-facebook-f"></i><span
+																						class="elementor-screen-only">Leggi
+																						Tutto</span>
+																				</div>
+																			</div>
+																			<div class="elementor-testimonial__content">
+																				<div
+																					class="elementor-testimonial__text">
+																					Soy profesora de universidad con más
+																					de 40 años de experiencia. Me
+																					encanta mi trabajo y no quiero
+																					jubilarme, pero debido a la carga
+																					constante por los libros de texto y
+																					el portátil, mi visión fue
+																					empeorando con los años. Empecé a
+																					ver peor, incluso me resultaba
+																					difícil leer la letra pequeña con
+																					las gafas. Temía que a ese ritmo
+																					pronto tuviera que despedirme de la
+																					ciencia. Cuando compartí mis
+																					problemas con una colega, ella me
+																					recomendó tomar las gotas orales
+																					Vizinex. Una semana después, leer
+																					el texto en el portátil se hizo
+																					notablemente más fácil. Poco a poco,
+																					recuperé mi visión en un mes. Ahora
+																					llevo gafas con dioptrías mínimas.
+																					¡Y eso que tengo 67 años! </div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5c96e065"
+											data-id="5c96e065" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-dd6d20 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews"
+													data-id="dd6d20" data-element_type="widget"
+													data-widget_type="reviews.default">
+													<div class="elementor-widget-container">
+														<div class="elementor-swiper">
+															<div class="elementor-main-swiper swiper">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide">
+																		<div
+																			class="elementor-testimonial elementor-repeater-item-5cd9594">
+																			<div class="elementor-testimonial__header">
+																				<div
+																					class="elementor-testimonial__image">
+																					<img decoding="async"
+																						src="images/image-2-2.jpg"
+																						alt="Javier M.">
+																				</div>
+																				<div
+																					class="elementor-testimonial__cite">
+																					<span
+																						class="elementor-testimonial__name">Javier
+																						M.</span>
+																					<div><i class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i>
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__icon elementor-icon elementor-icon-facebook-f">
+																					<i aria-hidden="true"
+																						class="fab fa-facebook-f"></i><span
+																						class="elementor-screen-only">Leggi
+																						Tutto</span>
+																				</div>
+																			</div>
+																			<div class="elementor-testimonial__content">
+																				<div
+																					class="elementor-testimonial__text">
+																					Llevo trabajando en la oficina toda
+																					mi vida. A los 40 años, mi visión
+																					empeoró rápidamente. Tuve que
+																					empezar a ponerme gafas, lo cual no
+																					era nada cómodo. Las lentillas
+																					tampoco me gustaban porque me dolían
+																					y me picaban los ojos después de
+																					usarlas. Lo peor de todo era que
+																					cuanto más usaba gafas y lentillas,
+																					peor veía sin ellas. Para no
+																					quedarme completamente ciego,
+																					comencé a tomar las gotas orales
+																					Vizinex por recomendación de un
+																					amigo. La visión fue mejorando poco
+																					a poco. Después de un par de
+																					semanas, los objetos ya no me
+																					parecían borrosos y, un mes después,
+																					ya podía leer los carteles
+																					publicitarios en la casa de al lado.
+																					Aún me pongo gafas, pero con
+																					lentillas más finas. Estoy seguro de
+																					que después de 2-3 ciclos de
+																					tratamiento con Vizinex, ¡podré
+																					prescindir de ellas!
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7efe4a93"
+											data-id="7efe4a93" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-1c1a21b0 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews"
+													data-id="1c1a21b0" data-element_type="widget"
+													data-widget_type="reviews.default">
+													<div class="elementor-widget-container">
+														<div class="elementor-swiper">
+															<div class="elementor-main-swiper swiper">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide">
+																		<div
+																			class="elementor-testimonial elementor-repeater-item-5cd9594">
+																			<div class="elementor-testimonial__header">
+																				<div
+																					class="elementor-testimonial__image">
+																					<img decoding="async"
+																						src="images/r0ezylm0r5d04.jpg"
+																						alt="Paolma A.">
+																				</div>
+																				<div
+																					class="elementor-testimonial__cite">
+																					<span
+																						class="elementor-testimonial__name">Paolma
+																						A.</span>
+																					<div><i class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i><i
+																							class="fa-solid fa-star"
+																							style="color: #FFD43B;"></i>
+																					</div>
+																				</div>
+																				<div
+																					class="elementor-testimonial__icon elementor-icon elementor-icon-facebook-f">
+																					<i aria-hidden="true"
+																						class="fab fa-facebook-f"></i><span
+																						class="elementor-screen-only">Leggi
+																						Tutto</span>
+																				</div>
+																			</div>
+																			<div class="elementor-testimonial__content">
+																				<div
+																					class="elementor-testimonial__text">
+																					Tuve miopía extrema durante muchos
+																					años y solo podía ver con un ojo.
+																					Soy pianista, la música es la mayor
+																					alegría de mi vida, pero ni siquiera
+																					podía distinguir las notas. No podía
+																					llevar gafas por más de 15-20
+																					minutos porque me provocaban
+																					terribles dolores de cabeza. Decidí
+																					pedir Vizinex porque escuché que
+																					este producto ayuda a restaurar la
+																					visión, pero en mi difícil caso solo
+																					podía rezar por un milagro. Sin
+																					embargo, un mes después logré lograr
+																					resultados sorprendentes. Recuperé
+																					la visión casi por completo. Mi
+																					optometrista dijo que nunca había
+																					visto tal progreso antes. ¡Y ahora
+																					lo recomienda a todos sus pacientes.
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-20e34734 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="20e34734" data-element_type="section" id="modulo">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1d1791e4"
+							data-id="1d1791e4" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-1e339dc0 elementor-widget elementor-widget-image"
+									data-id="1e339dc0" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img decoding="async" src="images/visiorax.webp" title="visiorax" alt="visiorax"
+											loading="lazy">
+									</div>
+								</div>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-d7e4f7e elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+									data-id="d7e4f7e" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-e556972"
+											data-id="e556972" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-f943799 elementor-widget elementor-widget-heading"
+													data-id="f943799" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<p class="elementor-heading-title elementor-size-default">Precio
+															inicial</p>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-5c7d868 elementor-widget elementor-widget-heading"
+													data-id="5c7d868" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<p class="elementor-heading-title elementor-size-default">
+															<x-oldprice>1580</x-oldprice> <x-currency>MXN</x-currency>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-f6cfdca"
+											data-id="f6cfdca" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2e05f30 elementor-view-default elementor-widget elementor-widget-icon"
+													data-id="2e05f30" data-element_type="widget"
+													data-widget_type="icon.default">
+													<div class="elementor-widget-container">
+														<div class="elementor-icon-wrapper">
+															<div class="elementor-icon">
+																<i aria-hidden="true" class="fas fa-arrow-right"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b4c280d"
+											data-id="b4c280d" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-8bf6362 elementor-widget elementor-widget-heading"
+													data-id="8bf6362" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<p class="elementor-heading-title elementor-size-default">OFERTA
+														</p>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-75ef749 elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline"
+													data-id="75ef749" data-element_type="widget"
+													data-widget_type="animated-headline.default">
+													<div class="elementor-widget-container">
+														<h3 class="elementor-headline">
+															<span
+																class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+																<span
+																	class="elementor-headline-dynamic-text elementor-headline-text-active"><x-newprice>790</x-newprice>
+																	<x-currency>MXN</x-currency></span>
+															</span>
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-1721efd"
+											data-id="1721efd" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-f7bcd12 elementor-align-left elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+													data-id="f7bcd12" data-element_type="widget"
+													data-widget_type="icon-list.default">
+													<div class="elementor-widget-container">
+														<ul class="elementor-icon-list-items">
+															<li class="elementor-icon-list-item">
+																<span class="elementor-icon-list-icon">
+																	<i aria-hidden="true" class="fas fa-truck"></i>
+																</span>
+																<span class="elementor-icon-list-text"><b> Envío
+																		rapido</b> </span>
+															</li>
+															<li class="elementor-icon-list-item">
+																<span class="elementor-icon-list-icon">
+																	<i aria-hidden="true"
+																		class="fas fa-money-bill-wave"></i> </span>
+																<span class="elementor-icon-list-text"><b>Paga cuando
+																		recibes</b> </span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section
+									class="elementor-section elementor-inner-section elementor-element elementor-element-77e254d4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+									data-id="77e254d4" data-element_type="section">
+									<div class="elementor-container elementor-column-gap-default">
+										<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-bbc4bbe"
+											data-id="bbc4bbe" data-element_type="column">
+											<div class="elementor-widget-wrap elementor-element-populated">
+												<div class="elementor-element elementor-element-2a50bcd1 elementor-widget elementor-widget-heading"
+													data-id="2a50bcd1" data-element_type="widget"
+													data-widget_type="heading.default">
+													<div class="elementor-widget-container">
+														<h2 class="elementor-heading-title elementor-size-default">✅ POR
+															SU GARANTIA ✅</h2>
+													</div>
+												</div>
+												<div class="elementor-element elementor-element-627ed955 elementor-widget elementor-widget-text-editor"
+													data-id="627ed955" data-element_type="widget"
+													data-widget_type="text-editor.default">
+													<div class="elementor-widget-container">
+														<p><strong>Hacemos todo lo posible para entregar el producto, en
+																cualquier área de México, dentro de las 72 horas.
+																S</strong><b>uele llegar en 1 semana como máximo.</b>
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2e711ed0"
+							data-id="2e711ed0" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-4c175ddc elementor-widget elementor-widget-menu-anchor"
+									data-id="4c175ddc" data-element_type="widget"
+									data-widget_type="menu-anchor.default">
+									<div class="elementor-widget-container">
+										<div id="ordina" class="elementor-menu-anchor"></div>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-bcba86 elementor-widget elementor-widget-heading"
+									data-id="bcba86" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">RELLENA EL FORMULARIO
+											PARA REALIZAR EL PEDIDO</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-b86a8f2 elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
+									data-id="b86a8f2" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img decoding="async" src="images/deliv-icon-copia-3-1-1-1.png"
+											title="deliv-icon-copia-3-1-1-1.png" alt="deliv-icon-copia-3-1-1-1.png"
+											loading="lazy">
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-1e83c36b elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading"
+									data-id="1e83c36b" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">A continuación, uno
+											de nuestros <b> asesores se pondrá en contacto con usted y le brindará
+												asistencia </b> completamente <b> gratuita </b></h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-1f3878b elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading"
+									data-id="1f3878b" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">MX</h2>
+									</div>
+								</div>
+								<div
+									class="elementor-element elementor-element-26511e69 elementor-button-align-stretch elementor-widget elementor-widget-form">
+									<div class="elementor-widget-container">
+										<form class="elementor-form" id="order" action="" method="post">
+
+											<input name="csrf_token" type="hidden"
+												value="37db9d95c4066f680aabbeb9f8a18cfd:1767816125">
+											<select name="offer" class="form-control country_chang"
+												style="display: none;">
+												<option data-country-code="MX" selected="selected" value="20414">
+													Мексика </option>
+											</select>
+
+
+
+											<div class="elementor-form-fields-wrapper elementor-labels-above">
+												<div
+													class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required elementor-mark-required">
+													<label for="123" class="elementor-field-label">
+														Nombre y Apellido </label>
+													<input size="1" type="text" name="name"
+														class="elementor-field elementor-size-sm  elementor-field-textual"
+														placeholder="Ingrese su Nombre" required="required" id="123"
+														minlength="2" value="">
+												</div>
+												<div
+													class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-phone elementor-col-100 elementor-field-required elementor-mark-required">
+													<label for="321" class="elementor-field-label">
+														Número de Teléfono </label>
+													<input size="1" type="tel" name="phone"
+														class="elementor-field elementor-size-sm  elementor-field-textual"
+														placeholder="Ingrese su número telefónico" required="required"
+														id="321" value="">
+
+												</div>
+												<div
+													class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+													<button type="submit" class="elementor-button elementor-size-sm">
+														<span>
+															<span class=" elementor-button-icon">
+															</span>
+															<span class="elementor-button-text">PIDE AHORA</span>
+														</span>
+													</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-2a802d78 elementor-widget elementor-widget-image"
+									data-id="2a802d78" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+										<img loading="lazy" decoding="async" width="800" height="258"
+											src="images/359-3598989_badges-for-light-backgrounds-mcafee-secure-1-1-3-1-1-1-1.jpg"
+											class="attachment-large size-large wp-image-1939" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-3b1b88d7 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="3b1b88d7" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-77c6abbb"
+							data-id="77c6abbb" data-element_type="column">
+							<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-597aeaed elementor-widget elementor-widget-menu-anchor"
+									data-id="597aeaed" data-element_type="widget"
+									data-widget_type="menu-anchor.default">
+									<div class="elementor-widget-container">
+										<div id="faq" class="elementor-menu-anchor"></div>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-6a9a9863 elementor-widget elementor-widget-heading"
+									data-id="6a9a9863" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">
+											PREGUNTAS FRECUENTES</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-1d4cdcf3 elementor-widget elementor-widget-toggle"
+									data-id="1d4cdcf3" data-element_type="widget" data-widget_type="toggle.default">
+									<div class="elementor-widget-container">
+										<div class="elementor-toggle">
+											<div class="elementor-toggle-item">
+												<div id="elementor-tab-title-4911" class="elementor-tab-title"
+													data-tab="1" role="button"
+													aria-controls="elementor-tab-content-4911" aria-expanded="false">
+													<span class="elementor-toggle-icon elementor-toggle-icon-left"
+														aria-hidden="true">
+														<span class="elementor-toggle-icon-closed"><i
+																class="fas fa-caret-right"></i></span>
+														<span class="elementor-toggle-icon-opened"><i
+																class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+													<p class="elementor-toggle-title">1. ¿Cuáles son los
+														plazos de entrega?</p>
+												</div>
+
+												<div id="elementor-tab-content-4911"
+													class="elementor-tab-content close elementor-clearfix" data-tab="1"
+													role="region" aria-labelledby="elementor-tab-title-4911">
+													<p>Normalmente, el servicio de mensajería realiza la entrega en un
+														plazo máximo de 7 días.</p>
+												</div>
+											</div>
+											<div class="elementor-toggle-item">
+												<div id="elementor-tab-title-4912" class="elementor-tab-title"
+													data-tab="2" role="button"
+													aria-controls="elementor-tab-content-4912" aria-expanded="false">
+													<span class="elementor-toggle-icon elementor-toggle-icon-left"
+														aria-hidden="true">
+														<span class="elementor-toggle-icon-closed"><i
+																class="fas fa-caret-right"></i></span>
+														<span class="elementor-toggle-icon-opened"><i
+																class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+													<p class="elementor-toggle-title">2. ¿Puedo pagar
+														directamente contra entrega?</p>
+												</div>
+
+												<div id="elementor-tab-content-4912"
+													class="elementor-tab-content close elementor-clearfix" data-tab="2"
+													role="region" aria-labelledby="elementor-tab-title-4912">
+													<p>Sí, para garantizar una mayor comodidad y seguridad ofrecemos
+														Pago Contra Entrega, ¡puedes pagar directamente al mensajero
+														cuando llegue a tu casa!</p>
+												</div>
+											</div>
+											<div class="elementor-toggle-item">
+												<div id="elementor-tab-title-4913" class="elementor-tab-title"
+													data-tab="3" role="button"
+													aria-controls="elementor-tab-content-4913" aria-expanded="false">
+													<span class="elementor-toggle-icon elementor-toggle-icon-left"
+														aria-hidden="true">
+														<span class="elementor-toggle-icon-closed"><i
+																class="fas fa-caret-right"></i></span>
+														<span class="elementor-toggle-icon-opened"><i
+																class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+													<p class="elementor-toggle-title">3. ¿Están seguros mis
+														datos?</p>
+												</div>
+
+												<div id="elementor-tab-content-4913"
+													class="elementor-tab-content close elementor-clearfix" data-tab="3"
+													role="region" aria-labelledby="elementor-tab-title-4913">
+													<p>Absolutamente sí, si observa en la parte superior izquierda
+														notará el símbolo del candado con https, esto garantiza que sus
+														datos se envían con total seguridad a nuestros operadores que se
+														encargarán de enviar el producto. Puedes leer nuestra política
+														de privacidad para saber más</p>
+												</div>
+											</div>
+											<div class="elementor-toggle-item">
+												<div id="elementor-tab-title-4914" class="elementor-tab-title"
+													data-tab="4" role="button"
+													aria-controls="elementor-tab-content-4914" aria-expanded="false">
+													<span class="elementor-toggle-icon elementor-toggle-icon-left"
+														aria-hidden="true">
+														<span class="elementor-toggle-icon-closed"><i
+																class="fas fa-caret-right"></i></span>
+														<span class="elementor-toggle-icon-opened"><i
+																class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+													<p class="elementor-toggle-title">4. ¿Puedo tener más
+														información?</p>
+												</div>
+
+												<div id="elementor-tab-content-4914"
+													class="elementor-tab-content elementor-clearfix close" data-tab="4"
+													role="region" aria-labelledby="elementor-tab-title-4914">
+													<p>¡Por supuesto! Si aún no ha completado el formulario de pedido y
+														no está seguro de qué hacer, al completarlo, uno de nuestros
+														operadores lo contactará por teléfono para responder a todas sus
+														preguntas antes de comprar.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-86784f4 elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button"
+									data-id="86784f4" data-element_type="widget" data-widget_type="button.default">
+									<div class="elementor-widget-container">
+										<div class="elementor-button-wrapper">
+											<a class="elementor-button elementor-button-link elementor-size-md"
+												href="#ordina">
+												<span class="elementor-button-content-wrapper">
+													<span class="elementor-button-text">PIDE AHORA <br>
+														<span style="color: white;"> PAGO CUANDO RECIBES
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<p>
+						Copyright © 2025 por
+						<span id="pdfLink">Copyrightindex.com</span>
+					</p>
+					<p>Todos los derechos reservados. No puede ser reproducido, distribuido o transmitido en cualquier
+						forma o por cualquier medio, incluyendo la reproducción, grabación u otros medios electrónicos o
+						mecánicos sin el permiso escrito del editor. Excepto cuando se hagan breves referencias a
+						reseñas críticas y otros usos no comerciales permitidos por la ley de derechos de autor.</p>
+				</footer>
+
+			</div>
+			<div class="post-tags">
+			</div>
+		</div>
+	</main>
+	<div class="foot_en_center" style="text-align: center; margin: 0px auto; padding: 30px 0; font-size:15px">
+		<p>Galaxy Trade LTD</p>
+		<p>16 George street, London, UK. skype: Galaxy-trade, email: Galaxy-trade2000@gmail.com</p>
+
+
+
+		<p class="conf-link doclinks">
+			<a class="nav-link" href="" onclick="window.open('/policy_en.php'); return false;">Privacy Policy</a>
+			|
+			<a class="nav-link" href="" onclick="window.open('/terms_en.php'); return false;">Terms & Conditions</a>
+		</p>
+
+
+	</div>
+	<script>
+		$(document).on('click', '.elementor-tab-title', function (e) {
+			e.preventDefault();
+			$(this).toggleClass('active');
+			$(this).parent().find('.elementor-tab-content').first().toggleClass('close');
+		})
+	</script>
+
+
+	<!-- Success Modal -->
+	<div id="successModal"
+		style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+		<div
+			style="background-color:#fefefe; margin:auto; padding:20px; border:1px solid #888; width:90%; max-width:500px; border-radius:10px; text-align:center; position: relative; top: 50%; transform: translateY(-50%); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+			<h2 style="color:#28a745; margin-bottom:15px;">¡Pedido Confirmado!</h2>
+			<p style="font-size:16px; color:#333; margin-bottom:20px;">
+				Gracias. Un operador se pondrá en contacto con usted pronto al número proporcionado para confirmar la
+				entrega. Por favor, esté atento para responder la llamada.
+			</p>
+			<button onclick="document.getElementById('successModal').style.display='none'"
+				style="background-color:#28a745; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-size:16px; font-weight:bold;">
+				OK
+			</button>
+		</div>
+	</div>
+
+	<script>
+		// Logic to handle success state and tracking
+		window.addEventListener('DOMContentLoaded', function () {
+			var urlParams = new URLSearchParams(window.location.search);
+
+			// 1. Check for success status
+			if (urlParams.get('status') === 'success') {
+				// Show Modal
+				var modal = document.getElementById('successModal');
+				if (modal) {
+					modal.style.display = 'flex';
+				}
+
+				// Fire Google Ads Conversion
+				if (typeof gtag === 'function') {
+					gtag('event', 'conversion', {
+						'send_to': 'AW-852350021/l_cQCI3B0d4bEMWot5YD',
+						'transaction_id': Date.now()
+					});
+				}
+
+				// Clean URL (remove ?status=success)
+				var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+				window.history.pushState({ path: newUrl }, '', newUrl);
+			}
+		});
+	</script>
+
+</body>
+
+</html>
